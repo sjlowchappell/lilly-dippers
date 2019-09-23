@@ -178,6 +178,8 @@ input::-moz-focus-inner {
 header {
   text-align: center;
   background: url(../images/rsz_hero.jpg);
+  background-color: grey;
+  background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
   height: 60vh;
@@ -224,4 +226,16 @@ nav ul {
 
 .featuredArticle > * {
   flex: 1 0 40%;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.headerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
 }

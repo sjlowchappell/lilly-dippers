@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -25,22 +25,41 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
+      {/* <Header /> */}
+      <header className="App-header">
+        <div className="wrapper">
+          <h1>The Lilly Dippers</h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/page-2/">About</Link>
+              </li>
+              <li>
+                <Link to="/page-2/">Trips</Link>
+              </li>
+              <li>
+                <Link to="/page-2/">Tips</Link>
+              </li>
+              <li>
+                <Link to="/page-2/">Gear Reviews</Link>
+              </li>
+              <li>
+                <Link to="/page-2/">Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>{children}</main>
+      <footer>
+        <div className="wrapper">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+          {` `}
+          by Sam Low-Chappell
+        </div>
+      </footer>
     </>
   )
 }

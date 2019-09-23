@@ -10,6 +10,7 @@ import blogPost from "../images/blogPost.jpeg"
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Home" />
     <main>
       <div className="wrapper">
         <FeaturedPost
